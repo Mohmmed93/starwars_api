@@ -1,0 +1,48 @@
+// Top-level build file where you can add configuration options common to all sub-projects/modules.
+buildscript {
+    ext {
+        kotlin_version = '1.5.30'
+        junitVersion = "4.12"
+        multidexLibVersion = "1.0.3"
+        picassoVersion = "2.5.2"
+        debugDbVersion = "1.0.3"
+        chipCloudLibVersion = "2.2.1"
+        retrofitLibVersion = "2.9.0"
+        roomCompilerLibVersion = "1.1.1"
+        nav_version = "2.3.0-alpha02"
+        moshi_version = '1.9.2'
+        converter_moshi_version = '2.4.0'
+        mokito_kotlin_version = "1.5.0"
+        rxkotlin_version = "3.0.0"
+        rxjava_version = '3.0.4'
+        rxandroid_version = '3.0.0'
+        version_lifecycle_extensions = "2.1.0"
+        version_glide = "4.9.0"
+        version_gson = "2.8.6"
+        version_timber = "4.7.1"
+    }
+
+    repositories {
+        google()
+        jcenter()
+        mavenCentral()
+    }
+    dependencies {
+        classpath "com.android.tools.build:gradle:7.0.3"
+        classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
+        classpath "androidx.navigation:navigation-safe-args-gradle-plugin:2.3.5"
+        // NOTE: Do not place your application dependencies here; they belong
+        // in the individual module build.gradle files
+    }
+}
+
+task clean(type: Delete) {
+    delete rootProject.buildDir
+}
+
+ext {
+    minSdkVersion = 17 // Support library and architecture components support minSdk 17 and above.
+    targetSdkVersion = 29
+    compileSdkVersion = 29
+    buildToolsVersion = '29'
+}
